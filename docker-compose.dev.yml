@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  webpack:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: takacsmark/onepagewebsite-nginx-bootstrap-webpack:dev-1.0
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./img:/usr/src/app/img
+    

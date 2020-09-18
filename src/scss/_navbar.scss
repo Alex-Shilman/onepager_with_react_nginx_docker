@@ -1,0 +1,88 @@
+.main-nav {
+  background-color: $white;
+  border-bottom: 1px solid fade-out($gray-900, .9);
+
+  .navbar-brand {
+    color: $primary;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      color: darken($primary, .1);
+    }
+  }
+
+  .nav-link {
+    &,
+    &:focus {
+      color: $gray-900;
+      font-size: .9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &.active {
+        background-color: transparent;
+        color: $primary !important;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    background-color: transparent;
+    border-color: transparent;
+
+    .navbar-brand {
+      color: fade-out($white, .3);
+
+      &:focus,
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .nav-item {
+      .nav-link {
+        &,
+        &:focus {
+          color: fade-out($white, .3);
+          padding: .5rem 1rem;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &.navbar-shrink {
+      background-color: $white;
+      border-bottom: 1px solid fade-out($gray-900, .9);
+
+      .navbar-brand {
+        color: $primary;
+
+        &:focus,
+        &:hover {
+          color: darken($primary, .1);
+        }
+      }
+
+      .nav-item {
+        .nav-link {
+          &,
+          &:focus {
+            color: $gray-900;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

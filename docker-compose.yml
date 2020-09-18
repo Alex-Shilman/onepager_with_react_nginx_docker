@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: takacsmark/onepagewebsite-nginx-bootstrap-webpack:1.0
+    ports:
+      - 80:80
+    

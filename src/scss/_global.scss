@@ -1,0 +1,56 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+hr {
+  border-color: $primary;
+  border-width: 3px;
+  max-width: 50px;
+
+  .light {
+    border-color: $white;
+  }
+}
+
+a {
+  color: $primary;
+
+  &:hover {
+    color: darken($primary, .1);
+  }
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-dark {
+  background-color: $gray-900 !important;
+}
+
+.text-faded {
+  color: fade-out($white, .1);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.section-heading {
+  margin-top: 0;
+}
+
+::selection {
+  background: $gray-900;
+  color: $white;
+  text-shadow: none;
+}
+
+img {
+  &::selection {
+    background: transparent;
+    color: $white;
+  }
+}
